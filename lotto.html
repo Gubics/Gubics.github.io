@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lottó 5-ös</title>
+            <link rel="stylesheet" href="bootstrap.css">
+            <link rel="stylesheet" href="styles.css">
+            <!--<script type="text/javascript">
+                document.onkeydown = function (event) {
+                     event = (event || window.event);
+                     if (event.keyCode == 123 || event.keyCode == 18)
+                     {
+                           return false;
+                     }
+                }
+                document.addEventListener('contextmenu', event => event.preventDefault());
+            </script>-->
+            <script src="myjs.js"></script>
+        </head>
+        <body>
+            <form>
+                <div id="szelveny" class="container">
+                    <div class="row">
+                        <div id="szelveny1" class="valaszt col-lg-4 col-md-6 col-sm-12">
+                            <p class="kozep">1. Szelvény</p>
+                            <div class="row">
+                                <input type="button" id="10" class="szamok" name="kocka1" value="1" onclick="check(1, 0)">
+                                <input type="button" id="20" class="szamok" name="kocka1" value="2" onclick="check(2, 0)">
+                                <input type="button" id="30" class="szamok" name="kocka1" value="3" onclick="check(3, 0)">
+                                <input type="button" id="40" class="szamok" name="kocka1" value="4" onclick="check(4, 0)">
+                                <input type="button" id="50" class="szamok" name="kocka1" value="5" onclick="check(5, 0)">
+                                <input type="button" id="60" class="szamok" name="kocka1" value="6" onclick="check(6, 0)">
+                                <input type="button" id="70" class="szamok" name="kocka1" value="7" onclick="check(7, 0)">
+                                <input type="button" id="80" class="szamok" name="kocka1" value="8" onclick="check(8, 0)">
+                                <input type="button" id="90" class="szamok" name="kocka1" value="9" onclick="check(9, 0)">
+                                <input type="button" id="100" class="szamok" name="kocka1" value="10" onclick="check(10, 0)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="110" class="szamok" name="kocka1" value="11" onclick="check(11, 0)">
+                                <input type="button" id="120" class="szamok" name="kocka1" value="12" onclick="check(12, 0)">
+                                <input type="button" id="130" class="szamok" name="kocka1" value="13" onclick="check(13, 0)">
+                                <input type="button" id="140" class="szamok" name="kocka1" value="14" onclick="check(14, 0)">
+                                <input type="button" id="150" class="szamok" name="kocka1" value="15" onclick="check(15, 0)">
+                                <input type="button" id="160" class="szamok" name="kocka1" value="16" onclick="check(16, 0)">
+                                <input type="button" id="170" class="szamok" name="kocka1" value="17" onclick="check(17, 0)">
+                                <input type="button" id="180" class="szamok" name="kocka1" value="18" onclick="check(18, 0)">
+                                <input type="button" id="190" class="szamok" name="kocka1" value="19" onclick="check(19, 0)">
+                                <input type="button" id="200" class="szamok" name="kocka1" value="20" onclick="check(20, 0)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="210" class="szamok" name="kocka1" value="21" onclick="check(21, 0)">
+                                <input type="button" id="220" class="szamok" name="kocka1" value="22" onclick="check(22, 0)">
+                                <input type="button" id="230" class="szamok" name="kocka1" value="23" onclick="check(23, 0)">
+                                <input type="button" id="240" class="szamok" name="kocka1" value="24" onclick="check(24, 0)">
+                                <input type="button" id="250" class="szamok" name="kocka1" value="25" onclick="check(25, 0)">
+                                <input type="button" id="260" class="szamok" name="kocka1" value="26" onclick="check(26, 0)">
+                                <input type="button" id="270" class="szamok" name="kocka1" value="27" onclick="check(27, 0)">
+                                <input type="button" id="280" class="szamok" name="kocka1" value="28" onclick="check(28, 0)">
+                                <input type="button" id="290" class="szamok" name="kocka1" value="29" onclick="check(29, 0)">
+                                <input type="button" id="300" class="szamok" name="kocka1" value="30" onclick="check(30, 0)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="310" class="szamok" name="kocka1" value="31" onclick="check(31, 0)">
+                                <input type="button" id="320" class="szamok" name="kocka1" value="32" onclick="check(32, 0)">
+                                <input type="button" id="330" class="szamok" name="kocka1" value="33" onclick="check(33, 0)">
+                                <input type="button" id="340" class="szamok" name="kocka1" value="34" onclick="check(34, 0)">
+                                <input type="button" id="350" class="szamok" name="kocka1" value="35" onclick="check(35, 0)">
+                                <input type="button" id="360" class="szamok" name="kocka1" value="36" onclick="check(36, 0)">
+                                <input type="button" id="370" class="szamok" name="kocka1" value="37" onclick="check(37, 0)">
+                                <input type="button" id="380" class="szamok" name="kocka1" value="38" onclick="check(38, 0)">
+                                <input type="button" id="390" class="szamok" name="kocka1" value="39" onclick="check(39, 0)">
+                                <input type="button" id="400" class="szamok" name="kocka1" value="40" onclick="check(40, 0)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="410" class="szamok" name="kocka1" value="41" onclick="check(41, 0)">
+                                <input type="button" id="420" class="szamok" name="kocka1" value="42" onclick="check(42, 0)">
+                                <input type="button" id="430" class="szamok" name="kocka1" value="43" onclick="check(43, 0)">
+                                <input type="button" id="440" class="szamok" name="kocka1" value="44" onclick="check(44, 0)">
+                                <input type="button" id="450" class="szamok" name="kocka1" value="45" onclick="check(45, 0)">
+                                <input type="button" id="460" class="szamok" name="kocka1" value="46" onclick="check(46, 0)">
+                                <input type="button" id="470" class="szamok" name="kocka1" value="47" onclick="check(47, 0)">
+                                <input type="button" id="480" class="szamok" name="kocka1" value="48" onclick="check(48, 0)">
+                                <input type="button" id="490" class="szamok" name="kocka1" value="49" onclick="check(49, 0)">
+                                <input type="button" id="500" class="szamok" name="kocka1" value="50" onclick="check(50, 0)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="510" class="szamok" name="kocka1" value="51" onclick="check(51, 0)">
+                                <input type="button" id="520" class="szamok" name="kocka1" value="52" onclick="check(52, 0)">
+                                <input type="button" id="530" class="szamok" name="kocka1" value="53" onclick="check(53, 0)">
+                                <input type="button" id="540" class="szamok" name="kocka1" value="54" onclick="check(54, 0)">
+                                <input type="button" id="550" class="szamok" name="kocka1" value="55" onclick="check(55, 0)">
+                                <input type="button" id="560" class="szamok" name="kocka1" value="56" onclick="check(56, 0)">
+                                <input type="button" id="570" class="szamok" name="kocka1" value="57" onclick="check(57, 0)">
+                                <input type="button" id="580" class="szamok" name="kocka1" value="58" onclick="check(58, 0)">
+                                <input type="button" id="590" class="szamok" name="kocka1" value="59" onclick="check(59, 0)">
+                                <input type="button" id="600" class="szamok" name="kocka1" value="60" onclick="check(60, 0)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="610" class="szamok" name="kocka1" value="61" onclick="check(61, 0)">
+                                <input type="button" id="620" class="szamok" name="kocka1" value="62" onclick="check(62, 0)">
+                                <input type="button" id="630" class="szamok" name="kocka1" value="63" onclick="check(63, 0)">
+                                <input type="button" id="640" class="szamok" name="kocka1" value="64" onclick="check(64, 0)">
+                                <input type="button" id="650" class="szamok" name="kocka1" value="65" onclick="check(65, 0)">
+                                <input type="button" id="660" class="szamok" name="kocka1" value="66" onclick="check(66, 0)">
+                                <input type="button" id="670" class="szamok" name="kocka1" value="67" onclick="check(67, 0)">
+                                <input type="button" id="680" class="szamok" name="kocka1" value="68" onclick="check(68, 0)">
+                                <input type="button" id="690" class="szamok" name="kocka1" value="69" onclick="check(69, 0)">
+                                <input type="button" id="700" class="szamok" name="kocka1" value="70" onclick="check(70, 0)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="710" class="szamok" name="kocka1" value="71" onclick="check(71, 0)">
+                                <input type="button" id="720" class="szamok" name="kocka1" value="72" onclick="check(72, 0)">
+                                <input type="button" id="730" class="szamok" name="kocka1" value="73" onclick="check(73, 0)">
+                                <input type="button" id="740" class="szamok" name="kocka1" value="74" onclick="check(74, 0)">
+                                <input type="button" id="750" class="szamok" name="kocka1" value="75" onclick="check(75, 0)">
+                                <input type="button" id="760" class="szamok" name="kocka1" value="76" onclick="check(76, 0)">
+                                <input type="button" id="770" class="szamok" name="kocka1" value="77" onclick="check(77, 0)">
+                                <input type="button" id="780" class="szamok" name="kocka1" value="78" onclick="check(78, 0)">
+                                <input type="button" id="790" class="szamok" name="kocka1" value="79" onclick="check(79, 0)">
+                                <input type="button" id="800" class="szamok" name="kocka1" value="80" onclick="check(80, 0)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="810" class="szamok" name="kocka1" value="81" onclick="check(81, 0)">
+                                <input type="button" id="820" class="szamok" name="kocka1" value="82" onclick="check(82, 0)">
+                                <input type="button" id="830" class="szamok" name="kocka1" value="83" onclick="check(83, 0)">
+                                <input type="button" id="840" class="szamok" name="kocka1" value="84" onclick="check(84, 0)">
+                                <input type="button" id="850" class="szamok" name="kocka1" value="85" onclick="check(85, 0)">
+                                <input type="button" id="860" class="szamok" name="kocka1" value="86" onclick="check(86, 0)">
+                                <input type="button" id="870" class="szamok" name="kocka1" value="87" onclick="check(87, 0)">
+                                <input type="button" id="880" class="szamok" name="kocka1" value="88" onclick="check(88, 0)">
+                                <input type="button" id="890" class="szamok" name="kocka1" value="89" onclick="check(89, 0)">
+                                <input type="button" id="900" class="szamok" name="kocka1" value="90" onclick="check(90, 0)">
+                            </div>
+                            <div>
+                                <p class="kijelzo" id="szamaid0">Számaid:</p>
+                            </div>
+                        </div>
+
+                        <div id="szelveny2" class="valaszt col-lg-4 col-md-6 col-sm-12">
+                            <p class="kozep">2. Szelvény</p>
+                            <div class="row">
+                                <input type="button" id="11" class="szamok" name="kocka2" value="1" onclick="check(1, 1)">
+                                <input type="button" id="21" class="szamok" name="kocka2" value="2" onclick="check(2, 1)">
+                                <input type="button" id="31" class="szamok" name="kocka2" value="3" onclick="check(3, 1)">
+                                <input type="button" id="41" class="szamok" name="kocka2" value="4" onclick="check(4, 1)">
+                                <input type="button" id="51" class="szamok" name="kocka2" value="5" onclick="check(5, 1)">
+                                <input type="button" id="61" class="szamok" name="kocka2" value="6" onclick="check(6, 1)">
+                                <input type="button" id="71" class="szamok" name="kocka2" value="7" onclick="check(7, 1)">
+                                <input type="button" id="81" class="szamok" name="kocka2" value="8" onclick="check(8, 1)">
+                                <input type="button" id="91" class="szamok" name="kocka2" value="9" onclick="check(9, 1)">
+                                <input type="button" id="101" class="szamok" name="kocka2" value="10" onclick="check(10, 1)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="111" class="szamok" name="kocka2" value="11" onclick="check(11, 1)">
+                                <input type="button" id="121" class="szamok" name="kocka2" value="12" onclick="check(12, 1)">
+                                <input type="button" id="131" class="szamok" name="kocka2" value="13" onclick="check(13, 1)">
+                                <input type="button" id="141" class="szamok" name="kocka2" value="14" onclick="check(14, 1)">
+                                <input type="button" id="151" class="szamok" name="kocka2" value="15" onclick="check(15, 1)">
+                                <input type="button" id="161" class="szamok" name="kocka2" value="16" onclick="check(16, 1)">
+                                <input type="button" id="171" class="szamok" name="kocka2" value="17" onclick="check(17, 1)">
+                                <input type="button" id="181" class="szamok" name="kocka2" value="18" onclick="check(18, 1)">
+                                <input type="button" id="191" class="szamok" name="kocka2" value="19" onclick="check(19, 1)">
+                                <input type="button" id="201" class="szamok" name="kocka2" value="20" onclick="check(20, 1)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="211" class="szamok" name="kocka2" value="21" onclick="check(21, 1)">
+                                <input type="button" id="221" class="szamok" name="kocka2" value="22" onclick="check(22, 1)">
+                                <input type="button" id="231" class="szamok" name="kocka2" value="23" onclick="check(23, 1)">
+                                <input type="button" id="241" class="szamok" name="kocka2" value="24" onclick="check(24, 1)">
+                                <input type="button" id="251" class="szamok" name="kocka2" value="25" onclick="check(25, 1)">
+                                <input type="button" id="261" class="szamok" name="kocka2" value="26" onclick="check(26, 1)">
+                                <input type="button" id="271" class="szamok" name="kocka2" value="27" onclick="check(27, 1)">
+                                <input type="button" id="281" class="szamok" name="kocka2" value="28" onclick="check(28, 1)">
+                                <input type="button" id="291" class="szamok" name="kocka2" value="29" onclick="check(29, 1)">
+                                <input type="button" id="301" class="szamok" name="kocka2" value="30" onclick="check(30, 1)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="311" class="szamok" name="kocka2" value="31" onclick="check(31, 1)">
+                                <input type="button" id="321" class="szamok" name="kocka2" value="32" onclick="check(32, 1)">
+                                <input type="button" id="331" class="szamok" name="kocka2" value="33" onclick="check(33, 1)">
+                                <input type="button" id="341" class="szamok" name="kocka2" value="34" onclick="check(34, 1)">
+                                <input type="button" id="351" class="szamok" name="kocka2" value="35" onclick="check(35, 1)">
+                                <input type="button" id="361" class="szamok" name="kocka2" value="36" onclick="check(36, 1)">
+                                <input type="button" id="371" class="szamok" name="kocka2" value="37" onclick="check(37, 1)">
+                                <input type="button" id="381" class="szamok" name="kocka2" value="38" onclick="check(38, 1)">
+                                <input type="button" id="391" class="szamok" name="kocka2" value="39" onclick="check(39, 1)">
+                                <input type="button" id="401" class="szamok" name="kocka2" value="40" onclick="check(40, 1)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="411" class="szamok" name="kocka2" value="41" onclick="check(41, 1)">
+                                <input type="button" id="421" class="szamok" name="kocka2" value="42" onclick="check(42, 1)">
+                                <input type="button" id="431" class="szamok" name="kocka2" value="43" onclick="check(43, 1)">
+                                <input type="button" id="441" class="szamok" name="kocka2" value="44" onclick="check(44, 1)">
+                                <input type="button" id="451" class="szamok" name="kocka2" value="45" onclick="check(45, 1)">
+                                <input type="button" id="461" class="szamok" name="kocka2" value="46" onclick="check(46, 1)">
+                                <input type="button" id="471" class="szamok" name="kocka2" value="47" onclick="check(47, 1)">
+                                <input type="button" id="481" class="szamok" name="kocka2" value="48" onclick="check(48, 1)">
+                                <input type="button" id="491" class="szamok" name="kocka2" value="49" onclick="check(49, 1)">
+                                <input type="button" id="501" class="szamok" name="kocka2" value="50" onclick="check(50, 1)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="511" class="szamok" name="kocka2" value="51" onclick="check(51, 1)">
+                                <input type="button" id="521" class="szamok" name="kocka2" value="52" onclick="check(52, 1)">
+                                <input type="button" id="531" class="szamok" name="kocka2" value="53" onclick="check(53, 1)">
+                                <input type="button" id="541" class="szamok" name="kocka2" value="54" onclick="check(54, 1)">
+                                <input type="button" id="551" class="szamok" name="kocka2" value="55" onclick="check(55, 1)">
+                                <input type="button" id="561" class="szamok" name="kocka2" value="56" onclick="check(56, 1)">
+                                <input type="button" id="571" class="szamok" name="kocka2" value="57" onclick="check(57, 1)">
+                                <input type="button" id="581" class="szamok" name="kocka2" value="58" onclick="check(58, 1)">
+                                <input type="button" id="591" class="szamok" name="kocka2" value="59" onclick="check(59, 1)">
+                                <input type="button" id="601" class="szamok" name="kocka2" value="60" onclick="check(60, 1)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="611" class="szamok" name="kocka2" value="61" onclick="check(61, 1)">
+                                <input type="button" id="621" class="szamok" name="kocka2" value="62" onclick="check(62, 1)">
+                                <input type="button" id="631" class="szamok" name="kocka2" value="63" onclick="check(63, 1)">
+                                <input type="button" id="641" class="szamok" name="kocka2" value="64" onclick="check(64, 1)">
+                                <input type="button" id="651" class="szamok" name="kocka2" value="65" onclick="check(65, 1)">
+                                <input type="button" id="661" class="szamok" name="kocka2" value="66" onclick="check(66, 1)">
+                                <input type="button" id="671" class="szamok" name="kocka2" value="67" onclick="check(67, 1)">
+                                <input type="button" id="681" class="szamok" name="kocka2" value="68" onclick="check(68, 1)">
+                                <input type="button" id="691" class="szamok" name="kocka2" value="69" onclick="check(69, 1)">
+                                <input type="button" id="701" class="szamok" name="kocka2" value="70" onclick="check(70, 1)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="711" class="szamok" name="kocka2" value="71" onclick="check(71, 1)">
+                                <input type="button" id="721" class="szamok" name="kocka2" value="72" onclick="check(72, 1)">
+                                <input type="button" id="731" class="szamok" name="kocka2" value="73" onclick="check(73, 1)">
+                                <input type="button" id="741" class="szamok" name="kocka2" value="74" onclick="check(74, 1)">
+                                <input type="button" id="751" class="szamok" name="kocka2" value="75" onclick="check(75, 1)">
+                                <input type="button" id="761" class="szamok" name="kocka2" value="76" onclick="check(76, 1)">
+                                <input type="button" id="771" class="szamok" name="kocka2" value="77" onclick="check(77, 1)">
+                                <input type="button" id="781" class="szamok" name="kocka2" value="78" onclick="check(78, 1)">
+                                <input type="button" id="791" class="szamok" name="kocka2" value="79" onclick="check(79, 1)">
+                                <input type="button" id="801" class="szamok" name="kocka2" value="80" onclick="check(80, 1)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="811" class="szamok" name="kocka2" value="81" onclick="check(81, 1)">
+                                <input type="button" id="821" class="szamok" name="kocka2" value="82" onclick="check(82, 1)">
+                                <input type="button" id="831" class="szamok" name="kocka2" value="83" onclick="check(83, 1)">
+                                <input type="button" id="841" class="szamok" name="kocka2" value="84" onclick="check(84, 1)">
+                                <input type="button" id="851" class="szamok" name="kocka2" value="85" onclick="check(85, 1)">
+                                <input type="button" id="861" class="szamok" name="kocka2" value="86" onclick="check(86, 1)">
+                                <input type="button" id="871" class="szamok" name="kocka2" value="87" onclick="check(87, 1)">
+                                <input type="button" id="881" class="szamok" name="kocka2" value="88" onclick="check(88, 1)">
+                                <input type="button" id="891" class="szamok" name="kocka2" value="89" onclick="check(89, 1)">
+                                <input type="button" id="901" class="szamok" name="kocka2" value="90" onclick="check(90, 1)">
+                            </div>
+                            <div>
+                                <p class="kijelzo" id="szamaid1">Számaid:</p>
+                            </div>
+                        </div>
+
+                        <div id="szelveny3" class="valaszt col-lg-4 col-md-6 col-sm-12">
+                            <p class="kozep">3. Szelvény</p>
+                            <div class="row">
+                                <input type="button" id="12" class="szamok" name="kocka3" value="1" onclick="check(1, 2)">
+                                <input type="button" id="22" class="szamok" name="kocka3" value="2" onclick="check(2, 2)">
+                                <input type="button" id="32" class="szamok" name="kocka3" value="3" onclick="check(3, 2)">
+                                <input type="button" id="42" class="szamok" name="kocka3" value="4" onclick="check(4, 2)">
+                                <input type="button" id="52" class="szamok" name="kocka3" value="5" onclick="check(5, 2)">
+                                <input type="button" id="62" class="szamok" name="kocka3" value="6" onclick="check(6, 2)">
+                                <input type="button" id="72" class="szamok" name="kocka3" value="7" onclick="check(7, 2)">
+                                <input type="button" id="82" class="szamok" name="kocka3" value="8" onclick="check(8, 2)">
+                                <input type="button" id="92" class="szamok" name="kocka3" value="9" onclick="check(9, 2)">
+                                <input type="button" id="102" class="szamok" name="kocka3" value="10" onclick="check(10, 2)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="112" class="szamok" name="kocka3" value="11" onclick="check(11, 2)">
+                                <input type="button" id="122" class="szamok" name="kocka3" value="12" onclick="check(12, 2)">
+                                <input type="button" id="132" class="szamok" name="kocka3" value="13" onclick="check(13, 2)">
+                                <input type="button" id="142" class="szamok" name="kocka3" value="14" onclick="check(14, 2)">
+                                <input type="button" id="152" class="szamok" name="kocka3" value="15" onclick="check(15, 2)">
+                                <input type="button" id="162" class="szamok" name="kocka3" value="16" onclick="check(16, 2)">
+                                <input type="button" id="172" class="szamok" name="kocka3" value="17" onclick="check(17, 2)">
+                                <input type="button" id="182" class="szamok" name="kocka3" value="18" onclick="check(18, 2)">
+                                <input type="button" id="192" class="szamok" name="kocka3" value="19" onclick="check(19, 2)">
+                                <input type="button" id="202" class="szamok" name="kocka3" value="20" onclick="check(20, 2)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="212" class="szamok" name="kocka3" value="21" onclick="check(21, 2)">
+                                <input type="button" id="222" class="szamok" name="kocka3" value="22" onclick="check(22, 2)">
+                                <input type="button" id="232" class="szamok" name="kocka3" value="23" onclick="check(23, 2)">
+                                <input type="button" id="242" class="szamok" name="kocka3" value="24" onclick="check(24, 2)">
+                                <input type="button" id="252" class="szamok" name="kocka3" value="25" onclick="check(25, 2)">
+                                <input type="button" id="262" class="szamok" name="kocka3" value="26" onclick="check(26, 2)">
+                                <input type="button" id="272" class="szamok" name="kocka3" value="27" onclick="check(27, 2)">
+                                <input type="button" id="282" class="szamok" name="kocka3" value="28" onclick="check(28, 2)">
+                                <input type="button" id="292" class="szamok" name="kocka3" value="29" onclick="check(29, 2)">
+                                <input type="button" id="302" class="szamok" name="kocka3" value="30" onclick="check(30, 2)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="312" class="szamok" name="kocka3" value="31" onclick="check(31, 2)">
+                                <input type="button" id="322" class="szamok" name="kocka3" value="32" onclick="check(32, 2)">
+                                <input type="button" id="332" class="szamok" name="kocka3" value="33" onclick="check(33, 2)">
+                                <input type="button" id="342" class="szamok" name="kocka3" value="34" onclick="check(34, 2)">
+                                <input type="button" id="352" class="szamok" name="kocka3" value="35" onclick="check(35, 2)">
+                                <input type="button" id="362" class="szamok" name="kocka3" value="36" onclick="check(36, 2)">
+                                <input type="button" id="372" class="szamok" name="kocka3" value="37" onclick="check(37, 2)">
+                                <input type="button" id="382" class="szamok" name="kocka3" value="38" onclick="check(38, 2)">
+                                <input type="button" id="392" class="szamok" name="kocka3" value="39" onclick="check(39, 2)">
+                                <input type="button" id="402" class="szamok" name="kocka3" value="40" onclick="check(40, 2)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="412" class="szamok" name="kocka3" value="41" onclick="check(41, 2)">
+                                <input type="button" id="422" class="szamok" name="kocka3" value="42" onclick="check(42, 2)">
+                                <input type="button" id="432" class="szamok" name="kocka3" value="43" onclick="check(43, 2)">
+                                <input type="button" id="442" class="szamok" name="kocka3" value="44" onclick="check(44, 2)">
+                                <input type="button" id="452" class="szamok" name="kocka3" value="45" onclick="check(45, 2)">
+                                <input type="button" id="462" class="szamok" name="kocka3" value="46" onclick="check(46, 2)">
+                                <input type="button" id="472" class="szamok" name="kocka3" value="47" onclick="check(47, 2)">
+                                <input type="button" id="482" class="szamok" name="kocka3" value="48" onclick="check(48, 2)">
+                                <input type="button" id="492" class="szamok" name="kocka3" value="49" onclick="check(49, 2)">
+                                <input type="button" id="502" class="szamok" name="kocka3" value="50" onclick="check(50, 2)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="512" class="szamok" name="kocka3" value="51" onclick="check(51, 2)">
+                                <input type="button" id="522" class="szamok" name="kocka3" value="52" onclick="check(52, 2)">
+                                <input type="button" id="532" class="szamok" name="kocka3" value="53" onclick="check(53, 2)">
+                                <input type="button" id="542" class="szamok" name="kocka3" value="54" onclick="check(54, 2)">
+                                <input type="button" id="552" class="szamok" name="kocka3" value="55" onclick="check(55, 2)">
+                                <input type="button" id="562" class="szamok" name="kocka3" value="56" onclick="check(56, 2)">
+                                <input type="button" id="572" class="szamok" name="kocka3" value="57" onclick="check(57, 2)">
+                                <input type="button" id="582" class="szamok" name="kocka3" value="58" onclick="check(58, 2)">
+                                <input type="button" id="592" class="szamok" name="kocka3" value="59" onclick="check(59, 2)">
+                                <input type="button" id="602" class="szamok" name="kocka3" value="60" onclick="check(60, 2)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="612" class="szamok" name="kocka3" value="61" onclick="check(61, 2)">
+                                <input type="button" id="622" class="szamok" name="kocka3" value="62" onclick="check(62, 2)">
+                                <input type="button" id="632" class="szamok" name="kocka3" value="63" onclick="check(63, 2)">
+                                <input type="button" id="642" class="szamok" name="kocka3" value="64" onclick="check(64, 2)">
+                                <input type="button" id="652" class="szamok" name="kocka3" value="65" onclick="check(65, 2)">
+                                <input type="button" id="662" class="szamok" name="kocka3" value="66" onclick="check(66, 2)">
+                                <input type="button" id="672" class="szamok" name="kocka3" value="67" onclick="check(67, 2)">
+                                <input type="button" id="682" class="szamok" name="kocka3" value="68" onclick="check(68, 2)">
+                                <input type="button" id="692" class="szamok" name="kocka3" value="69" onclick="check(69, 2)">
+                                <input type="button" id="702" class="szamok" name="kocka3" value="70" onclick="check(70, 2)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="712" class="szamok" name="kocka3" value="71" onclick="check(71, 2)">
+                                <input type="button" id="722" class="szamok" name="kocka3" value="72" onclick="check(72, 2)">
+                                <input type="button" id="732" class="szamok" name="kocka3" value="73" onclick="check(73, 2)">
+                                <input type="button" id="742" class="szamok" name="kocka3" value="74" onclick="check(74, 2)">
+                                <input type="button" id="752" class="szamok" name="kocka3" value="75" onclick="check(75, 2)">
+                                <input type="button" id="762" class="szamok" name="kocka3" value="76" onclick="check(76, 2)">
+                                <input type="button" id="772" class="szamok" name="kocka3" value="77" onclick="check(77, 2)">
+                                <input type="button" id="782" class="szamok" name="kocka3" value="78" onclick="check(78, 2)">
+                                <input type="button" id="792" class="szamok" name="kocka3" value="79" onclick="check(79, 2)">
+                                <input type="button" id="802" class="szamok" name="kocka3" value="80" onclick="check(80, 2)">
+                            </div>
+                            <div class="row">
+                                <input type="button" id="812" class="szamok" name="kocka3" value="81" onclick="check(81, 2)">
+                                <input type="button" id="822" class="szamok" name="kocka3" value="82" onclick="check(82, 2)">
+                                <input type="button" id="832" class="szamok" name="kocka3" value="83" onclick="check(83, 2)">
+                                <input type="button" id="842" class="szamok" name="kocka3" value="84" onclick="check(84, 2)">
+                                <input type="button" id="852" class="szamok" name="kocka3" value="85" onclick="check(85, 2)">
+                                <input type="button" id="862" class="szamok" name="kocka3" value="86" onclick="check(86, 2)">
+                                <input type="button" id="872" class="szamok" name="kocka3" value="87" onclick="check(87, 2)">
+                                <input type="button" id="882" class="szamok" name="kocka3" value="88" onclick="check(88, 2)">
+                                <input type="button" id="892" class="szamok" name="kocka3" value="89" onclick="check(89, 2)">
+                                <input type="button" id="902" class="szamok" name="kocka3" value="90" onclick="check(90, 2)">
+                            </div>
+                            <div>
+                                <p class="kijelzo" id="szamaid2">Számaid:</p>
+                            </div>
+                        </div>
+                </div>
+                <div class="container">
+                    <div id="ellenoriz" class="row kozep">
+                        <input type="button" value="Ellenőriz &#8635;" title="Ellenörzés és új év" onclick="ellenorzes()">
+                    </div>
+                    <div id="eredmeny"></div>
+                    <!--<div id="nyeroszamok"></div>-->
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

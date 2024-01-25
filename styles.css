@@ -1,0 +1,96 @@
+body
+{
+    background-color: gray;
+}
+
+.kozep
+{
+    text-align: center;
+    font-size: 35px;
+}
+
+.row
+{
+    margin: auto;
+    width: fit-content;
+    margin: 5px;
+}
+
+.valaszt
+{
+    width: fit-content;
+    height: fit-content;
+    border: red 3px solid;
+    margin: auto;
+    margin-bottom: 4px;
+    padding: 2px;
+    background-color: white;
+}
+
+.szamok
+{
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    padding: 2px;
+    padding-top: 0px;
+    border: red 1px solid;
+    cursor: pointer;
+}
+
+/*
+.szamok:active
+{
+    background-color: red;
+}
+
+.szamok:hover
+{
+    background-color: rgba(68, 65, 65, 0.42);
+}*/
+
+.kijelzo
+{
+    font-size: 20px;
+}
+
+#ellenoriz
+{
+    margin: auto;
+}
+
+#eredmeny
+{
+    font-size: 20px;
+}
+
+.container
+{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.row
+{
+    margin: auto !important;
+}
+
+@media (max-width: 1200px)
+{
+    .szamok
+    {
+        width: 20px;
+        height: 20px;
+        font-size: small;
+    }
+}
+
+@media (max-width: 351px)
+{
+    .szamok
+    {
+        width: 15px;
+        height: 15px;
+        font-size: x-small;
+    }
+}
